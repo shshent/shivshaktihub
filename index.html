@@ -1,105 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SSE | Panihati Sodepur Garment Store - 8777892438</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShivShaktiHub - Garments & Oriflame Beauty Store | Panihati Sodepur</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b}
-.container{max-width:1250px;margin:auto;padding:0 15px}a{text-decoration:none;color:inherit}
-.top-bar{background:#111827;color:#facc15;text-align:center;padding:7px;font-size:12px;font-weight:700}
-header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 15px rgba(0,0,0,.06)}
-.header-main{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
-.logo{font-weight:800;font-size:22px;display:flex;gap:8px;align-items:center}.logo-icon{background:#111827;color:#facc15;width:36px;height:36px;display:grid;place-items:center;border-radius:8px}
-.search-box{flex:1;max-width:500px;display:flex;background:#f1f5f9;border-radius:30px;border:1px solid #e2e8f0;overflow:hidden}.search-box input{flex:1;padding:11px 18px;border:0;background:transparent;outline:none}.search-box button{background:#111827;color:#fff;border:0;padding:0 18px;font-weight:700}
-.cart-btn{position:relative;background:#f1f5f9;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:20px;border:1px solid #e2e8f0;cursor:pointer}.cart-count{position:absolute;top:-5px;right:-5px;background:#ef4444;color:#fff;width:20px;height:20px;border-radius:50%;font-size:11px;display:grid;place-items:center;font-weight:700}
-.cat-bar{display:flex;gap:12px;padding:10px 0;overflow:auto;font-size:13px;font-weight:600}.cat-bar span{border:1px solid #e2e8f0;padding:6px 14px;border-radius:20px;cursor:pointer;white-space:nowrap}.cat-bar span.active{background:#111827;color:#fff}
-.hero{margin:14px auto;background:linear-gradient(110deg,#111827 70%,#1f2937);border-radius:16px;color:#fff;display:grid;grid-template-columns:1.2fr .8fr;overflow:hidden}.hero-left{padding:30px}.hero-left h1{font-size:32px;line-height:1.15}.hero-left h1 b{color:#facc15}.hero-btn{background:#facc15;color:#111827;padding:11px 22px;border-radius:10px;font-weight:800;border:0;margin-top:12px;cursor:pointer}.hero-right{background:linear-gradient(135deg,#facc15,#f59e0b);display:grid;place-items:center;padding:18px;color:#111827;font-weight:800;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;position:relative}.card-img{height:180px;background:#f8fafc;display:grid;place-items:center;font-size:48px}.add-btn{width:100%;margin-top:8px;background:#111827;color:#fff;border:0;padding:8px;border-radius:8px;font-weight:700;cursor:pointer}
-.products{padding:20px 0}.sec-head{margin:18px 0 12px;display:flex;justify-content:space-between}
-.policy-sec{background:#fff;padding:30px 0;border-top:2px solid #facc15}.policy-box{border:1px solid #e5e7eb;border-radius:12px;padding:20px;margin-bottom:16px}.policy-box h3{font-size:16px;margin-bottom:8px;border-left:4px solid #facc15;padding-left:8px;color:#111827}.policy-box li{font-size:13px;margin:5px 0;margin-left:16px}
-footer{background:#0f172a;color:#94a3b8;padding:35px 0 15px;margin-top:20px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.6fr;gap:18px}footer h4{color:#fff;margin-bottom:8px}footer a{display:block;margin:5px 0;font-size:13px;cursor:pointer}footer a:hover{color:#facc15}
-#cartDrawer{position:fixed;top:0;right:-100%;width:380px;max-width:92vw;height:100%;background:#fff;z-index:100;transition:.3s;display:flex;flex-direction:column}#cartDrawer.open{right:0}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;z-index:90}.overlay.show{display:block}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#fff8fb;color:#222}
+.header{background:#111;color:#fff;padding:15px;text-align:center;position:sticky;top:0;z-index:20}
+.header h1{margin:0;font-size:22px}.header p{margin:4px 0 0;font-size:12px;color:#f8c8d8}
+.nav{margin-top:10px}.nav a{color:#fff;margin:4px;background:#e91e63;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:12px;font-weight:bold;display:inline-block}
+.hero{background:linear-gradient(90deg,#ff1744,#e91e63,#9c27b0);color:#fff;text-align:center;padding:20px 12px}
+.hero h2{margin:0;font-size:18px}.hero p{margin:6px 0;font-size:13px}
+.hero a{display:inline-block;background:#fff;color:#e91e63;padding:10px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin:6px 5px;font-size:13px}
+.hero a.green{background:#25D366;color:#fff}
+.tabs{text-align:center;padding:12px;background:#fff;position:sticky;top:72px;z-index:15;border-bottom:1px solid #eee}
+.tabs button{padding:9px 18px;margin:4px;border:1px solid #e91e63;background:#fff;color:#e91e63;border-radius:20px;cursor:pointer;font-weight:bold;font-size:13px}
+.tabs button.active,.tabs button:hover{background:#e91e63;color:#fff}
+.section{padding:15px;display:none}.section.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}}
+.card{background:#fff;border-radius:12px;padding:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);border:1px solid #f0f0f0;position:relative}
+.card h3{font-size:13px;margin:6px 0;line-height:1.3;min-height:34px}
+.card .desc{font-size:11px;color:#666;min-height:24px}
+.badge{background:#ff1744;color:#fff;padding:2px 6px;border-radius:4px;font-size:10px;position:absolute;top:8px;left:8px}
+.price{margin:6px 0;font-size:12px}.price del{color:#999}.price strong{color:#e91e63;font-size:15px}
+.bp{font-size:10px;color:#888}
+.btn{display:block;background:#25D366;color:#fff;padding:8px;border-radius:6px;text-decoration:none;text-align:center;margin-top:6px;font-weight:bold;font-size:12px}
+.btn:hover{background:#128C7E}
+.cat-title{grid-column:1/-1;background:#111;color:#fff;padding:9px 14px;border-radius:7px;margin-top:10px;font-size:14px}
+.float-wa{position:fixed;bottom:20px;right:15px;background:#25D366;color:#fff;padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:30;font-size:13px}
+.float-pdf{position:fixed;bottom:20px;left:15px;background:#111;color:#fff;padding:10px 14px;border-radius:20px;text-decoration:none;font-size:11px;z-index:30}
+.garment-card{text-align:center}.garment-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;background:#f5f5f5}
 </style>
 </head>
 <body>
-<div class="top-bar">📍 PANIHATI - SODEPUR, WEST BENGAL - 700110 | 📞 PHONE / WHATSAPP SAME: 8777892438</div>
-<header><div class="container"><div class="header-main">
-<div class="logo"><div class="logo-icon">S</div>SHIV SHAKTI</div>
-<div class="search-box"><input id="searchInput" onkeyup="filterProducts()" placeholder="Search T-Shirt, Kurti, Kids..."><button onclick="filterProducts()">Search</button></div>
-<div style="text-align:right;line-height:1.2"><div style="font-size:11px;color:#64748b">Phone / WhatsApp Same</div><div style="font-weight:800;font-size:13px">8777892438</div></div>
-<div class="cart-btn" onclick="openCart()">🛒<div class="cart-count" id="cartCount">0</div></div>
-</div><div class="cat-bar"><span class="active" onclick="filterCat('all',this)">All</span><span onclick="filterCat('mens',this)">Men's Wear</span><span onclick="filterCat('womens',this)">Women's Wear</span><span onclick="filterCat('kids',this)">Kids Wear</span><span onclick="filterCat('winter',this)">Winter</span></div></div></header>
+<div class="header">
+<h1>ShivShaktiHub</h1>
+<p>Garments + Oriflame Sweden | Panihati Sodepur | Anita | WhatsApp: 8777892438</p>
+<div class="nav">
+<a href="#" onclick="showTab('garments')">Garments</a>
+<a href="#" onclick="showTab('beauty')">Beauty Store - 40% OFF</a>
+<a href="https://wa.me/918777892438?text=Hi%20Anita%20I%20want%20catalogue">WhatsApp</a>
+<a href="#pdf" onclick="document.getElementById('pdfsec').scrollIntoView()">Download PDF</a>
+</div>
+</div>
 
-<div class="container hero"><div class="hero-left"><h1>Panihati Sodepur Biggest <b>Garment Wholesale</b> Store</h1><p style="color:#cbd5e1;font-size:13px;margin-top:8px">Shiv Shakti Enterprise - Panihati, Sodepur, West Bengal - 700110. Phone/WhatsApp Same: <b style="color:#fff">8777892438</b></p><button class="hero-btn" onclick="document.getElementById('prodSec').scrollIntoView()">SHOP NOW - 50% OFF</button></div><div class="hero-right"><div><div style="font-size:48px">👕👚👶</div><div>PANIHATI STORE</div><div style="font-size:12px">Phone/WhatsApp Same<br><b style="font-size:18px">8777892438</b></div></div></div></div>
+<div class="hero">
+<h2>🎉 Garments + Beauty Under One Roof | Upto 40% OFF Oriflame</h2>
+<p>26th Page 71-98 Full Catalogue Live | Free Delivery Kolkata above ₹999</p>
+<a href="#" onclick="showTab('beauty')">SHOP 32 BEAUTY PRODUCTS →</a>
+<a href="https://wa.me/918777892438?text=Hi%20Anita%20Send%20Full%20Catalogue%20PDF" class="green">Get PDF on WhatsApp</a>
+</div>
 
-<section class="container products" id="prodSec"><div class="sec-head"><h2>🔥 Trending in Panihati Sodepur</h2></div><div class="grid" id="productGrid"></div></section>
+<div class="tabs">
+<button id="btn-garments" class="active" onclick="showTab('garments')">👗 Garments Store</button>
+<button id="btn-beauty" onclick="showTab('beauty')">💄 Oriflame Beauty (32)</button>
+</div>
 
-<!-- RETURN & TERMS SECTION - AB YAHI PE AA JAYEGA -->
-<section class="policy-sec" id="policies"><div class="container" style="max-width:900px">
-<h2 style="text-align:center;margin-bottom:20px">Our Store Policies - Panihati Sodepur</h2>
+<!-- GARMENTS SECTION -->
+<div id="garments" class="section active">
+<h2 style="text-align:center">ShivShaktiHub Garments - Panihati Sodepur</h2>
+<p style="text-align:center;font-size:13px;color:#666">Visit our shop at Sodepur / Order on WhatsApp 8777892438</p>
+<div class="grid">
+<div class="card garment-card"><div style="background:#f0f0f0;height:180px;display:flex;align-items:center;justify-content:center;border-radius:8px;">Your Saree Photo Here</div><h3>Saree Collection - Daily Wear & Party Wear</h3><p class="desc">Starting from ₹499</p><p class="price"><strong>From ₹499</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%20I%20want%20Saree%20Collection%20from%20ShivShaktiHub">Order Saree on WhatsApp</a></div>
+<div class="card garment-card"><div style="background:#f0f0f0;height:180px;display:flex;align-items:center;justify-content:center;border-radius:8px;">Your Kurti Photo Here</div><h3>Kurti & Dress Collection</h3><p class="desc">Cotton, Rayon, Festive</p><p class="price"><strong>From ₹399</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%20I%20want%20Kurti%20Collection">Order Kurti on WhatsApp</a></div>
+<div class="card garment-card"><div style="background:#f0f0f0;height:180px;display:flex;align-items:center;justify-content:center;border-radius:8px;">Your Mens Wear Here</div><h3>Mens & Kids Garments</h3><p class="desc">Shirt, T-Shirt, Kids Wear</p><p class="price"><strong>From ₹299</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%20I%20want%20Mens%20Garments">Order on WhatsApp</a></div>
+</div>
+<p style="text-align:center;margin-top:20px;font-size:12px">Replace these 3 boxes with your real garment photos. Just change the image URL.</p>
+</div>
 
-<div class="policy-box" id="return"><h3>↩️ Return & Exchange Policy - Panihati Sodepur</h3>
-<ul>
-<li><b>Retail (7 Days):</b> Defect, wrong size, damage pe 7 din me return. Product unused, tags ke saath hona chahiye.</li>
-<li><b>Wholesale (48 Hours):</b> Sirf manufacturing defect pe 48 hours me return. Opening video zaruri hai.</li>
-<li><b>Pickup:</b> Panihati, Sodepur, Khardah, Barasat, DumDum, Kolkata me free pickup. Outside Kolkata aapko courier karna hoga.</li>
-<li><b>Refund:</b> Panihati store pe QC ke baad 2-3 din me UPI/Bank/Store Credit me refund. Phone/WhatsApp Same: 8777892438</li>
-<li><b>Address:</b> Shiv Shakti Enterprise, Panihati, Sodepur, Near Station Road, North 24 Parganas, WB - 700110</li>
-</ul></div>
+<!-- BEAUTY SECTION - 32 PRODUCTS -->
+<div id="beauty" class="section">
+<div class="grid">
+<div class="cat-title">✨ NOVAGE+ - 30% OFF</div>
+<div class="card"><span class="badge">30% OFF</span><h3>45608 Anti-Blemish + Anti-Wrinkle Set (5 pcs)</h3><p class="desc">Cleanser, Toner, Serum, Day & Night</p><p class="price"><del>₹13500</del> <strong>₹9500</strong></p><p class="bp">170 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%20Anita%20CODE%2045608%20Rs9500">Order WhatsApp</a></div>
+<div class="card"><span class="badge">30% OFF</span><h3>45595 Bright Intense Set (5 pcs)</h3><p class="desc">Dark Spots & Brightness</p><p class="price"><del>₹13500</del> <strong>₹9500</strong></p><p class="bp">170 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%20CODE%2045595%20Rs9500">Order WhatsApp</a></div>
+<div class="card"><span class="badge">30% OFF</span><h3>41033 Bright Intense Eye Cream 15ml</h3><p class="desc">Dark Spots</p><p class="price"><del>₹1800</del> <strong>₹1259</strong></p><p class="bp">16 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%2041033%20Rs1259">Order WhatsApp</a></div>
+<div class="card"><span class="badge">30% OFF</span><h3>41034 Wrinkle Smooth Eye Cream 15ml</h3><p class="desc">Reduces wrinkle</p><p class="price"><del>₹1800</del> <strong>₹1259</strong></p><p class="bp">16 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%2041034">Order WhatsApp</a></div>
+<div class="card"><span class="badge">30% OFF</span><h3>42425 Lift + Firm Eye Cream 15ml</h3><p class="desc">Eyelid Lift 2 Weeks</p><p class="price"><del>₹1800</del> <strong>₹1259</strong></p><p class="bp">16 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%2042425">Order WhatsApp</a></div>
+<div class="card"><h3>47422 Eye Reviver Tool</h3><p class="desc">Stainless Steel Ball</p><p class="price"><strong>₹369</strong></p><p class="bp">5 B.P.</p><a class="btn" href="https://wa.me/918777892438?text=Hi%2047422%20Rs369">Order WhatsApp</a></div>
 
-<div class="policy-box" id="terms"><h3>📜 Terms & Conditions - Panihati Sodepur</h3>
-<ul>
-<li><b>Business:</b> Shiv Shakti Enterprise, Panihati, Sodepur, West Bengal - 700110, Owner Ashu, Phone/WhatsApp Same 8777892438, Email shivshaktienterprise24@gmail.com, Trade License & Udyam Registered.</li>
-<li><b>Pricing:</b> Wholesale min order ₹5000. Prices change without notice. Colour may slightly vary due to lighting/screen.</li>
-<li><b>Payment:</b> UPI (GPay, PhonePe, Paytm), Bank Transfer, COD (Panihati/Sodepur/Kolkata only). GST Bill 5% extra.</li>
-<li><b>Shipping:</b> Panihati/Sodepur Same day ₹50, Kolkata 24-48Hrs ₹50-100, Bengal 2-4 Days ₹80-150, All India 4-7 Days. Free Shipping Retail >₹1999, Wholesale >₹15000 in Panihati/Sodepur.</li>
-<li><b>Privacy:</b> Name/Phone/Address only for order, never shared. WhatsApp 8777892438 only for updates. STOP bolke opt-out.</li>
-<li><b>Jurisdiction:</b> Any dispute under Barrackpore/Kolkata Court, West Bengal.</li>
-</ul></div>
+<div class="cat-title">🌸 OPTIMALS - 40% OFF</div>
+<div class="card"><span class="badge">40% OFF</span><h3>153929 Even Out LIGHT - Oily Skin</h3><p class="desc">Gel Cleanser + Light Cream + SPF50</p><p class="price"><del>₹3627</del> <strong>₹2149</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%20153929%20Rs2149">Order WhatsApp</a></div>
+<div class="card"><span class="badge">40% OFF</span><h3>153930 Even Out RICH - Dry Skin</h3><p class="desc">Creamy Cleanser + Rich Cream + SPF50</p><p class="price"><del>₹3627</del> <strong>₹2149</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%20153930%20Rs2149">Order WhatsApp</a></div>
 
-<div class="policy-box" id="shipping"><h3>🚚 Shipping Policy</h3><p style="font-size:13px">Panihati/Sodepur/Khardah same day delivery available. Tracking WhatsApp pe 8777892438 same number pe milega.</p></div>
-</div></section>
+<div class="cat-title">💇 DUOLOGI HAIR CARE - 12 Products</div>
+<div class="card"><h3>44984 Bond Repair Pre-Shampoo 150ml</h3><p class="desc">Damaged hair Step 0</p><p class="price"><strong>₹799</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044984">Order WhatsApp</a></div>
+<div class="card"><h3>44966 Scalp Scrub 75ml</h3><p class="desc">Removes flakes & oil</p><p class="price"><strong>₹649</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044966">Order WhatsApp</a></div>
+<div class="card"><h3>44951 Anti-Flake Shampoo 250ml</h3><p class="desc">Dandruff prone</p><p class="price"><strong>₹699</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044951">Order WhatsApp</a></div>
+<div class="card"><h3>44958 Intense Repair Shampoo 250ml</h3><p class="desc">Dry damaged</p><p class="price"><strong>₹699</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044958">Order WhatsApp</a></div>
+<div class="card"><h3>46622 Curl Defining Shampoo 200ml</h3><p class="desc">Curly wavy</p><p class="price"><strong>₹729</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2046622">Order WhatsApp</a></div>
+<div class="card"><h3>44960 Rich Creme Conditioner 150ml</h3><p class="desc">Moisturising</p><p class="price"><strong>₹699</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044960">Order WhatsApp</a></div>
+<div class="card"><span class="badge">VIRAL</span><h3>44968 CC Hair Beautifier 150ml - 10-in-1</h3><p class="desc">Most Selling Viral Spray</p><p class="price"><strong>₹1049</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044968%20CC%20Spray">Order WhatsApp</a></div>
+<div class="card"><h3>47262 Bond Repair Overnight Serum 150ml</h3><p class="desc">Extreme Damage</p><p class="price"><strong>₹1199</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2047262">Order WhatsApp</a></div>
+<div class="card"><h3>44964 Sealing Hair Serum 30ml</h3><p class="desc">Split ends</p><p class="price"><strong>₹999</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2044964">Order WhatsApp</a></div>
+<div class="card"><h3>46985 Styling Gel 150ml</h3><p class="desc">Strong hold</p><p class="price"><strong>₹649</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2046985">Order WhatsApp</a></div>
+<div class="card"><h3>45436 Curl Leave-In Cream 150ml</h3><p class="desc">No frizz</p><p class="price"><strong>₹849</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2045436">Order WhatsApp</a></div>
+<div class="card"><h3>45492 Massager Tool</h3><p class="desc">Scalp massage</p><p class="price"><strong>₹499</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2045492">Order WhatsApp</a></div>
 
-<footer><div class="container"><div class="footer-grid">
-<div><div class="logo" style="color:#fff"><div class="logo-icon" style="background:#facc15;color:#111">S</div>SHIV SHAKTI ENTERPRISE</div><p style="font-size:13px;margin-top:8px">Panihati, Sodepur, Near Station Road<br>North 24 Parganas, West Bengal - 700110<br>Trade License | Udyam Registered<br><br>📞 Phone: 8777892438<br>💬 WhatsApp: 8777892438 (Same)<br>📧 shivshaktienterprise24@gmail.com</p></div>
-<div><h4>Shop</h4><a onclick="filterCat('all',document.querySelector('.cat-bar span'))">All Products</a><a onclick="filterCat('mens',document.querySelectorAll('.cat-bar span')[1])">Men's Wear</a><a onclick="filterCat('womens',document.querySelectorAll('.cat-bar span')[2])">Women's Wear</a><a onclick="filterCat('kids',document.querySelectorAll('.cat-bar span')[3])">Kids Wear</a></div>
-<div><h4>Our Policies</h4><a href="#return">↗ Return & Exchange Policy</a><a href="#terms">↗ Terms & Conditions</a><a href="#shipping">↗ Shipping Policy</a><a href="#terms">↗ Privacy Policy</a></div>
-<div><h4>Visit Panihati Store</h4><p style="font-size:13px">Shiv Shakti Enterprise<br>Panihati, Sodepur<br>Station Road, WB - 700110<br><br>Open: 9 AM - 9 PM All Days<br>Owner: Ashu<br><br><b style="color:#fff;font-size:16px">Phone / WhatsApp Same<br>8777892438</b></p></div>
-</div><div style="text-align:center;margin-top:20px;border-top:1px solid #1e293b;padding-top:10px;font-size:11px">© 2026 Shiv Shakti Enterprise, Panihati, Sodepur, West Bengal | Phone/WhatsApp Same: 8777892438</div></div></footer>
+<div class="cat-title">🦷 OPTIFRESH - 15% OFF</div>
+<div class="card"><span class="badge">15% OFF</span><h3>48308 Pro White Toothpaste 100g</h3><p class="desc">Whiter in 2 weeks</p><p class="price"><del>₹179</del> <strong>₹149</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2048308">Order WhatsApp</a></div>
+<div class="card"><span class="badge">15% OFF</span><h3>48310 Maximum Fresh Toothpaste 100g</h3><p class="desc">Intense freshness</p><p class="price"><del>₹179</del> <strong>₹149</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2048310">Order WhatsApp</a></div>
+<div class="card"><span class="badge">15% OFF</span><h3>48312 Kids Strawberry 50g</h3><p class="desc">2-6 Years</p><p class="price"><del>₹129</del> <strong>₹109</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2048312">Order WhatsApp</a></div>
+<div class="card"><h3>49137 Sensitive Brush Soft</h3><p class="desc">19x1.5cm</p><p class="price"><strong>₹129</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2049137">Order WhatsApp</a></div>
+<div class="card"><h3>49136 All In One Brush Medium</h3><p class="desc">19x1.5cm</p><p class="price"><strong>₹129</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2049136">Order WhatsApp</a></div>
+<div class="card"><h3>49135 Kids Brush Soft</h3><p class="desc">14x1.5cm</p><p class="price"><strong>₹129</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2049135">Order WhatsApp</a></div>
 
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
-<div id="cartDrawer"><div style="padding:16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;font-weight:700"><span>Cart (<span id="cartCount2">0</span>)</span><span onclick="closeCart()" style="cursor:pointer">✕</span></div><div style="flex:1;overflow:auto;padding:10px" id="cartItems"><p style="text-align:center;color:#94a3b8;margin-top:40px">Empty 🛒</p></div><div style="border-top:1px solid #eee;padding:12px;background:#f8fafc"><div style="display:flex;justify-content:space-between;font-weight:800"><span>Total</span><span id="grandTotal">₹0</span></div><button onclick="checkoutWA()" style="width:100%;background:#25D366;color:#fff;border:0;padding:12px;border-radius:10px;font-weight:800;margin-top:8px;cursor:pointer">Checkout on WhatsApp - 8777892438 💬</button></div></div>
+<div class="cat-title">🧔 MEN'S - 40% OFF</div>
+<div class="card"><span class="badge">40% OFF</span><h3>45847 Men's 4-in-1 Grooming Tool</h3><p class="desc">Beard Ear Nose Eyebrow</p><p class="price"><del>₹2839</del> <strong>₹1699</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2045847%20Rs1699">Order WhatsApp</a></div>
+<div class="card"><h3>46633 Subzero Roll-On 50ml</h3><p class="desc">Deo Roll-On</p><p class="price"><strong>₹379</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2046633">Order WhatsApp</a></div>
+<div class="card"><h3>46149 Subzero 2-in-1 Gel 50ml</h3><p class="desc">Moisturising Gel</p><p class="price"><strong>₹459</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2046149">Order WhatsApp</a></div>
+<div class="card"><h3>46632 Subzero Shaving Foam 200ml</h3><p class="desc">2-in-1 Foam</p><p class="price"><strong>₹699</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2046632">Order WhatsApp</a></div>
+<div class="card"><h3>43930 Ultimate Balance Cleanser 150ml</h3><p class="desc">Face Cleanser</p><p class="price"><strong>₹419</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2043930">Order WhatsApp</a></div>
+<div class="card"><h3>43931 Ultimate Balance Cream 50ml</h3><p class="desc">Face Cream</p><p class="price"><strong>₹589</strong></p><a class="btn" href="https://wa.me/918777892438?text=Hi%2043931">Order WhatsApp</a></div>
+</div>
+</div>
+
+<div id="pdfsec" style="text-align:center;padding:25px;background:#fff;border-top:2px solid #e91e63;margin-top:15px">
+<h3>📄 Download Full Catalogue PDF (32 Products)</h3>
+<p style="font-size:12px;color:#666">Both sides in one PDF - Print or Share on WhatsApp</p>
+<a href="ShivShaktiHub_Oriflame_Catalogue.pdf" download style="display:inline-block;background:#111;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;margin:5px">⬇️ Download PDF (5 Pages)</a>
+<a href="https://wa.me/918777892438?text=Hi%20Anita%20Please%20send%20Oriflame%20PDF%20Catalogue%20of%2032%20products" style="display:inline-block;background:#25D366;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;margin:5px">Get PDF on WhatsApp</a>
+<p style="font-size:11px;color:#999;margin-top:10px">File: ShivShaktiHub_Oriflame_Catalogue.pdf - Upload this file to your GitHub same folder as index.html</p>
+</div>
+
+<a class="float-wa" href="https://wa.me/918777892438?text=Hi%20Anita%20I%20want%20to%20order%20from%20ShivShaktiHub">💬 WhatsApp Order</a>
+<a class="float-pdf" href="#pdfsec">📄 PDF Catalogue</a>
 
 <script>
-const products=[{id:1,name:"Men's Cotton T-Shirt Combo 3 Pcs",cat:"mens",price:149,mrp:299,icon:"👕"},{id:2,name:"Men's Slim Jeans 28-36",cat:"mens",price:399,mrp:799,icon:"👖"},{id:3,name:"Women's Jaipur Kurti S-XXL",cat:"womens",price:199,mrp:399,icon:"👚"},{id:4,name:"Saree Daily Wear",cat:"womens",price:249,mrp:499,icon:"🥻"},{id:5,name:"Kids Combo 0-10 Years",cat:"kids",price:129,mrp:279,icon:"👶"},{id:6,name:"Winter Jacket",cat:"winter",price:299,mrp:599,icon:"🧥"}];
-let cart=[];let cur='all';
-function render(list){let g=document.getElementById('productGrid');g.innerHTML='';list.forEach(p=>{let inc=cart.find(c=>c.id===p.id);g.innerHTML+=`<div class="card"><div style="position:absolute;top:6px;left:6px;background:#ef4444;color:#fff;padding:2px 6px;border-radius:4px;font-size:10px;font-weight:700">${Math.round((1-p.price/p.mrp)*100)}% OFF</div><div class="card-img">${p.icon}</div><div style="padding:10px"><div style="font-size:13px;font-weight:600;height:34px;overflow:hidden">${p.name}</div><div style="font-size:11px;color:#f59e0b">★★★★★ Panihati</div><div><b>₹${p.price}</b> <small style="color:#94a3b8;text-decoration:line-through">₹${p.mrp}</small></div><button class="add-btn" onclick="addToCart(${p.id})">${inc?'✓ '+inc.qty+' Added':'Add to Cart'}</button></div></div>`});}
-function addToCart(id){let it=cart.find(c=>c.id===id);if(it)it.qty++;else cart.push({...products.find(p=>p.id===id),qty:1});update();render(getF());openCart();}
-function update(){let c=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartCount').innerText=c;document.getElementById('cartCount2').innerText=c;let d=document.getElementById('cartItems');if(cart.length==0)d.innerHTML='<p style="text-align:center;color:#94a3b8;margin-top:40px">Empty 🛒</p>';else{d.innerHTML='';cart.forEach((x,i)=>{d.innerHTML+=`<div style="display:flex;gap:8px;border:1px solid #f1f5f9;padding:8px;border-radius:8px;margin-bottom:6px"><div style="font-size:24px">${x.icon}</div><div style="flex:1"><div style="font-size:12px;font-weight:600">${x.name}</div><div style="font-size:11px">₹${x.price} x ${x.qty} = <b>₹${x.price*x.qty}</b></div></div><span onclick="cart.splice(${i},1);update();render(getF())" style="color:#ef4444;font-size:11px;cursor:pointer">✕</span></div>`});}let tot=cart.reduce((s,x)=>s+x.price*x.qty,0);document.getElementById('grandTotal').innerText='₹'+tot;}
-function getF(){let t=document.getElementById('searchInput').value.toLowerCase();return products.filter(p=>(cur=='all'||p.cat==cur)&&p.name.toLowerCase().includes(t));}
-function filterProducts(){render(getF());}function filterCat(c,el){cur=c;document.querySelectorAll('.cat-bar span').forEach(s=>s.classList.remove('active'));el.classList.add('active');filterProducts();}
-function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('overlay').classList.add('show');}function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('overlay').classList.remove('show');}
-function checkoutWA(){if(cart.length==0){alert('Cart empty');return}let msg="Hi Shiv Shakti Enterprise Panihati Sodepur,%0A%0AOrder:%0A";cart.forEach(c=>{msg+=`• ${c.name} - Qty ${c.qty} - ₹${c.price*c.qty}%0A`});let tot=cart.reduce((s,x)=>s+x.price*x.qty,0);msg+=`%0ATotal: ₹${tot}%0AName:%0AAddress:%0A%0APhone/WhatsApp: 8777892438`;window.open(`https://wa.me/918777892438?text=${msg}`,'_blank');}
-render(products);
+function showTab(tab){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.getElementById(tab).classList.add('active');
+document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+document.getElementById('btn-'+tab).classList.add('active');
+window.scrollTo(0,180);
+}
 </script>
 </body>
 </html>
-<!-- SHIVSHAKTIHUB ORIFLAME BANNER - START -->
-<div style="background:linear-gradient(90deg,#ff1744,#e91e63,#9c27b0);color:white;text-align:center;padding:18px 15px;font-family:Arial,sans-serif;position:relative;">
-  <span style="background:yellow;color:#000;padding:3px 8px;border-radius:5px;font-size:11px;font-weight:bold;position:absolute;top:5px;left:10px;transform:rotate(-5deg);">NEW</span>
-  <h2 style="margin:0;font-size:18px;">🎉 ShivShaktiHub x Oriflame Sweden 🎉</h2>
-  <p style="margin:6px 0;font-size:14px;">Garments + Beauty Under One Roof | Upto 40% OFF on Oriflame</p>
-  <p style="margin:5px 0;font-size:12px;">32 Products Live: Novage+ Eye Creams Rs1259 | Optimals Rs2149 | Men's Grooming Tool Rs1699</p>
-  <a href="oriflame.html" style="display:inline-block;background:white;color:#e91e63;padding:10px 25px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:8px;box-shadow:0 2px 8px rgba(0,0,0,0.3);">SHOP BEAUTY STORE - 40% OFF →</a>
-  <a href="https://wa.me/918777892438?text=Hi%20Anita%2C%20I%20saw%20ShivShaktiHub%20Banner%20-%20Send%20Oriflame%20Catalogue" style="display:inline-block;background:#25D366;color:white;padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:bold;margin-top:8px;margin-left:10px;">WhatsApp 8777892438</a>
-</div>
-
-<!-- SMALL FLOATING BADGE FOR ALL PAGES -->
-<style>
-.shiv-banner-float{position:fixed;bottom:80px;left:15px;background:#111;color:#fff;padding:8px 14px;border-radius:20px;font-size:12px;z-index:99;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,0.3);animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.7}}
-</style>
-<a class="shiv-banner-float" href="oriflame.html">✨ Oriflame 40% OFF - Click Here</a>
-<!-- SHIVSHAKTIHUB ORIFLAME BANNER - END -->
